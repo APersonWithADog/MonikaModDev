@@ -6924,7 +6924,7 @@ label monika_dogs:
     m 4eka "You never know how much a casual dismissal might hurt someone."
     m 1eua "But knowing you, [player], you won't do something like that, right?"
     return
-
+    
 init 5 python:
     addEvent(Event(persistent.event_database,eventlabel="monika_cats",category=['misc'],prompt="Feline companions",random=True))
 
@@ -15546,6 +15546,31 @@ label monika_remembrance:
 
     return
 
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="monika_swimming",
+            category=["misc"],
+            prompt="Swimming",
+            random=True
+        )
+    )
+
+label monika_swimming:
+    m 1eua "Can you swim, [player]?"
+    m 1hub "I don't mean to be rude or anything..."
+    m "I was just wondering..."
+    m 2eua "After all, there are 372,000 drowning-related deaths every year."
+    m "I just want you to be safe, [player]."
+    m 3eub "If you need to, find a local coach or lifeguard."
+    m "Even your local YMCA could do it."
+    m 5eub "Being in a game, I was never really coded with the ability."
+    m 5euc "Nor do I have any use for it..."
+    m 5eua "But maybe if I can get out, you could teach me."
+    m 1eua "You'd like that, woudln't you?"
+    return 
+    
 init 5 python:
     addEvent(
         Event(
